@@ -1,8 +1,12 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "Hunter Quest Page",
       "isDefault": true
+    },
+    {
+      "id": "Change Hunter Info Page",
+      "isDefault": false
     }
   ],
   "viewMode": false,
