@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Api2",
+    "name": "UpdateHunterInfo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/h/deleteHunter"
+        "url": "web:4000/h/hunterUpdate/1"
       },
       "invalids": [],
       "messages": [],
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{Hunter_Delete_Form.data}}",
+      "body": "{{Update_Hunter.data}}",
       "bodyFormData": [],
-      "httpMethod": "DELETE",
+      "httpMethod": "PUT",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -52,14 +52,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Hunter_Delete_Form.data"
+      "Update_Hunter.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hunter_Api2",
+  "id": "Hunter_UpdateHunterInfo",
   "deleted": false,
-  "gitSyncId": "643f25c5d63c526f009dbe8b_64401f3a2604c71539002826"
+  "gitSyncId": "643f25c5d63c526f009dbe8b_644020722604c71539002829"
 }

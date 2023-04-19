@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 470,
+          "bottomRow": 420,
           "containerStyle": "none",
           "snapRows": 60,
           "parentRowSpace": 1,
@@ -30,33 +30,12 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 12,
+              "topRow": 14,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
               "animateLoading": true,
               "dynamicBindingPathList": [
-                {
-                  "key": "primaryColumns.step.computedValue"
-                },
-                {
-                  "key": "primaryColumns.task.computedValue"
-                },
-                {
-                  "key": "primaryColumns.status.computedValue"
-                },
-                {
-                  "key": "primaryColumns.action.computedValue"
-                },
-                {
-                  "key": "primaryColumns.action.buttonColor"
-                },
-                {
-                  "key": "primaryColumns.action.borderRadius"
-                },
-                {
-                  "key": "primaryColumns.action.boxShadow"
-                },
                 {
                   "key": "accentColor"
                 },
@@ -68,6 +47,27 @@
                 },
                 {
                   "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.completion_date.computedValue"
+                },
+                {
+                  "key": "primaryColumns.description.computedValue"
+                },
+                {
+                  "key": "primaryColumns.difficulty.computedValue"
+                },
+                {
+                  "key": "primaryColumns.dragon_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.quest_id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.reward.computedValue"
+                },
+                {
+                  "key": "primaryColumns.s_id.computedValue"
                 }
               ],
               "needsHeightForContent": true,
@@ -105,20 +105,20 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1681921996025,
+              "columnUpdatedAt": 1681935102521,
               "defaultSelectedRowIndices": [
                 0
               ],
-              "widgetName": "Quest_List",
+              "widgetName": "Show_Quest",
               "defaultPageSize": 0,
               "columnOrder": [
-                "step",
-                "task",
-                "status",
-                "action",
-                "customColumn1",
-                "customColumn2",
-                "customColumn3"
+                "quest_id",
+                "s_id",
+                "dragon_name",
+                "difficulty",
+                "reward",
+                "description",
+                "completion_date"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -126,13 +126,11 @@
                 }
               ],
               "displayName": "Table",
-              "bottomRow": 47,
+              "bottomRow": 42,
               "columnWidthMap": {
-                "task": 146,
-                "step": 109,
-                "status": 133,
-                "action": 112.99999999999999,
-                "customColumn3": 350
+                "task": 245,
+                "step": 70,
+                "status": 85
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -140,110 +138,135 @@
               "dynamicTriggerPathList": [],
               "borderWidth": "1",
               "primaryColumns": {
-                "step": {
+                "completion_date": {
+                  "allowCellWrapping": false,
                   "index": 0,
                   "width": 150,
-                  "id": "step",
-                  "originalId": "step",
-                  "alias": "step",
+                  "originalId": "completion_date",
+                  "id": "completion_date",
+                  "alias": "completion_date",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "date",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Quest ID",
-                  "computedValue": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                  "validation": {},
+                  "label": "completion_date",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"completion_date\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "task": {
+                "description": {
+                  "allowCellWrapping": false,
                   "index": 1,
                   "width": 150,
-                  "id": "task",
-                  "originalId": "task",
-                  "alias": "task",
+                  "originalId": "description",
+                  "id": "description",
+                  "alias": "description",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Shopkeeper ID",
-                  "computedValue": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                  "validation": {},
+                  "label": "description",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"description\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "status": {
+                "difficulty": {
+                  "allowCellWrapping": false,
                   "index": 2,
                   "width": 150,
-                  "id": "status",
-                  "originalId": "status",
-                  "alias": "status",
+                  "originalId": "difficulty",
+                  "id": "difficulty",
+                  "alias": "difficulty",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
+                  "isDisabled": false,
                   "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Dragon Name",
-                  "computedValue": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                  "validation": {},
+                  "label": "difficulty",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"difficulty\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "action": {
+                "dragon_name": {
+                  "allowCellWrapping": false,
                   "index": 3,
                   "width": 150,
-                  "id": "action",
-                  "originalId": "action",
-                  "alias": "action",
+                  "originalId": "dragon_name",
+                  "id": "dragon_name",
+                  "alias": "dragon_name",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "button",
+                  "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
-                  "isCellVisible": true,
-                  "isCellEditable": false,
                   "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Reward",
-                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                  "computedValue": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                  "validation": {},
+                  "label": "dragon_name",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"dragon_name\"]))}}",
                   "sticky": "",
-                  "labelColor": "#FFFFFF",
-                  "buttonColor": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "borderRadius": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "boxShadow": "{{Quest_List.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                  "validation": {},
+                  "cellBackground": ""
                 },
-                "customColumn1": {
+                "quest_id": {
                   "allowCellWrapping": false,
                   "index": 4,
                   "width": 150,
-                  "originalId": "customColumn1",
-                  "id": "customColumn1",
-                  "alias": "Difficulty",
+                  "originalId": "quest_id",
+                  "id": "quest_id",
+                  "alias": "quest_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -251,27 +274,28 @@
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "Difficulty",
+                  "isDerived": false,
+                  "label": "quest_id",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "",
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"quest_id\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "labelColor": "#FFFFFF"
+                  "cellBackground": ""
                 },
-                "customColumn2": {
+                "reward": {
                   "allowCellWrapping": false,
                   "index": 5,
                   "width": 150,
-                  "originalId": "customColumn2",
-                  "id": "customColumn2",
-                  "alias": "Description",
+                  "originalId": "reward",
+                  "id": "reward",
+                  "alias": "reward",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -279,27 +303,28 @@
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "Description",
+                  "isDerived": false,
+                  "label": "reward",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "",
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"reward\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "labelColor": "#FFFFFF"
+                  "cellBackground": ""
                 },
-                "customColumn3": {
+                "s_id": {
                   "allowCellWrapping": false,
                   "index": 6,
                   "width": 150,
-                  "originalId": "customColumn3",
-                  "id": "customColumn3",
-                  "alias": "Date Completed",
+                  "originalId": "s_id",
+                  "id": "s_id",
+                  "alias": "s_id",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
+                  "textColor": "",
                   "textSize": "0.875rem",
+                  "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
                   "isVisible": true,
@@ -307,23 +332,22 @@
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "Date Completed",
+                  "isDerived": false,
+                  "label": "s_id",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "",
+                  "computedValue": "{{Show_Quest.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"s_id\"]))}}",
                   "sticky": "",
                   "validation": {},
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "labelColor": "#FFFFFF"
+                  "cellBackground": ""
                 }
               },
-              "key": "61u6wb0xhv",
+              "key": "zvrc77u5sb",
               "canFreezeColumn": true,
               "isDeprecated": false,
-              "rightColumn": 62,
+              "rightColumn": 64,
               "textSize": "0.875rem",
-              "widgetId": "zc3hc5s097",
+              "widgetId": "xvkmczx1yi",
               "minWidth": 450,
               "tableData": "{{Quests.data}}",
               "label": "Data",
