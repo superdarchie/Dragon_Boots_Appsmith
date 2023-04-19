@@ -7,6 +7,22 @@
     {
       "id": "Change Hunter Info Page",
       "isDefault": false
+    },
+    {
+      "id": "Wizard",
+      "isDefault": false
+    },
+    {
+      "id": "Quest Page",
+      "isDefault": false
+    },
+    {
+      "id": "Hunter",
+      "isDefault": false
+    },
+    {
+      "id": "Dragon",
+      "isDefault": false
     }
   ],
   "viewMode": false,
