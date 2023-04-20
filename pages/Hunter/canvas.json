@@ -27,7 +27,7 @@
           "children": [
             {
               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#c084fc",
               "widgetName": "Hunter_Add_Form",
               "isCanvas": true,
               "displayName": "Form",
@@ -602,7 +602,7 @@
             },
             {
               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#c084fc",
               "widgetName": "Hunter_Delete_Form",
               "isCanvas": true,
               "displayName": "Form",
@@ -890,7 +890,7 @@
             },
             {
               "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#c084fc",
               "widgetName": "Update_Hunter",
               "isCanvas": true,
               "displayName": "Form",
@@ -1410,7 +1410,7 @@
             },
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#c084fc",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
               "topRow": 45,
@@ -1491,7 +1491,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1681952638625,
+              "columnUpdatedAt": 1682014736904,
               "originalBottomRow": 73,
               "defaultSelectedRowIndices": [
                 0
@@ -1499,8 +1499,8 @@
               "widgetName": "Show_Hunter",
               "defaultPageSize": 0,
               "columnOrder": [
-                "h_id",
                 "id_number",
+                "h_id",
                 "hp",
                 "damage",
                 "defense",
@@ -1518,7 +1518,10 @@
               "columnWidthMap": {
                 "task": 245,
                 "step": 70,
-                "status": 85
+                "status": 85,
+                "h_id": 120,
+                "id_number": 121,
+                "quest_date": 181
               },
               "parentRowSpace": 10,
               "hideCard": false,
@@ -1547,7 +1550,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "damage",
+                  "label": "DMG",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"damage\"]))}}",
@@ -1576,7 +1579,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "defense",
+                  "label": "DEF",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"defense\"]))}}",
@@ -1605,7 +1608,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "h_id",
+                  "label": "Hunter ID",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"h_id\"]))}}",
@@ -1634,7 +1637,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "hp",
+                  "label": "HP",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hp\"]))}}",
@@ -1663,7 +1666,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "id_number",
+                  "label": "Account ID",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id_number\"]))}}",
@@ -1692,7 +1695,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "quest_date",
+                  "label": "Quest Date",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"quest_date\"]))}}",
@@ -1721,7 +1724,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "quest_id",
+                  "label": "Quest ID",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"quest_id\"]))}}",
@@ -1750,7 +1753,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "speed",
+                  "label": "SPD",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{Show_Hunter.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"speed\"]))}}",
