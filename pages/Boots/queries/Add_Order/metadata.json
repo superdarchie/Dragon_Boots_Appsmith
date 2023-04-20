@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Update_Wizard",
+    "name": "Add_Order",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/w/wizards/{{wizard_update_id.text}}"
+        "url": "web:4000/w/orders"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Wizard",
+    "pageId": "Boots",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{update_Wizard.data}}",
+      "body": "{{Order_updates.data}}",
       "bodyFormData": [],
-      "httpMethod": "PUT",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -46,24 +46,20 @@
     "dynamicBindingPathList": [
       {
         "key": "body"
-      },
-      {
-        "key": "datasourceUrl"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "update_Wizard.data",
-      "wizard_update_id.text"
+      "Order_updates.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Wizard_Update_Wizard",
+  "id": "Boots_Add_Order",
   "deleted": false,
-  "gitSyncId": "643f25c5d63c526f009dbe8b_644059f29f74737b8efc5608"
+  "gitSyncId": "643f25c5d63c526f009dbe8b_6440b257e34acb69d55a7a4a"
 }

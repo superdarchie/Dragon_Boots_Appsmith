@@ -5,10 +5,6 @@
       "isDefault": true
     },
     {
-      "id": "Change Hunter Info Page",
-      "isDefault": false
-    },
-    {
       "id": "Wizard",
       "isDefault": false
     },
@@ -22,6 +18,10 @@
     },
     {
       "id": "Dragon",
+      "isDefault": false
+    },
+    {
+      "id": "Boots",
       "isDefault": false
     }
   ],
