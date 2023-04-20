@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{d_name.text}}",
+      "body": "{{Dragon_form.data}}",
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -52,7 +52,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "d_name.text"
+      "Dragon_form.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
