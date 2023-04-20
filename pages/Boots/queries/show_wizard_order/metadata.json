@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "List_Dragon_Names",
+    "name": "show_wizard_order",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/h/allDragonsNames"
+        "url": "web:4000/w/orders/{{wiz_id.text}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Dragon",
+    "pageId": "Boots",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,17 +37,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "wiz_id.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Dragon_List_Dragon_Names",
+  "id": "Boots_show_wizard_order",
   "deleted": false,
-  "gitSyncId": "643f25c5d63c526f009dbe8b_644054ec9f74737b8efc5600"
+  "gitSyncId": "643f25c5d63c526f009dbe8b_6441c1be5272b705a8f3d7a6"
 }
